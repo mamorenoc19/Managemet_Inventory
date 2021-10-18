@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Managemet_Inventory_App.apps.ManagemetInventoryAppConfig'
+    'Managemet_Inventory_App.apps.ManagemetInventoryAppConfig',
 ]
 
 MIDDLEWARE = [
