@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +8,52 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Base</title>
-    {% block head%}
-    {% endblock%}
+    {% block head %}
+    {% endblock %}
 </head>
+
 <body>
-    <!-- barra de navegacion -->
     <div class="w3-bar w3-gray w3-border-bottom w3-border-black w3-teal">
-        <button class="w3-button w3-teal w3-gray w3-left w3-xxlarge" onclick="w3_open()">☰</button>
+        <button onclick="barra('barra')" class="w3-button w3-teal w3-gray w3-left w3-xxlarge">☰</button>
         <img class="w3-left" src="logo_mi.png" alt="logo" width="65" height="65">
         <a class="w3-bar-item w3-cursive w3-xxlarge">MANAGMENT INVENTORY</a>
-        <i class="w3-xxxlarge w3-button w3-right material-icons">account_circle</i>
-        <i class="w3-xxxlarge w3-button w3-right material-icons">notifications</i>
-        <i class="w3-xxxlarge w3-button w3-right material-icons">mail</i>
+        <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">account_circle</i>
+        <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">notifications</i>
+        <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">mail</i>
     </div>
-    <!-- barra lateral -->
-    <div class="w3-sidebar w3-bar-block w3-border-right w3-border-black w3-gray w3-center" style="display:none" id="mySidebar">
-        <button onclick="w3_close()" class="w3-bar-item w3-border-bottom w3-border-black w3-button w3-gray w3-large">&times;
-        </button>
-        <i class="w3-xxxlarge w3-button material-icons">home</i>
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-border-black w3-gray w3-center" style="display:none"
+        id="barra">
+        <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">home</i>
         <br>
-        <a class="w3-large">HOME</a>
+        <a class="w3-large"  href="{% url 'home'%}">HOME</a>
         <p>
-        <i class="w3-xxxlarge w3-button material-icons">search</i>
-        <br>
-        <a class="w3-large">SEARCH</a>
+            <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">search</i>
+            <br>
+            <a class="w3-large"  href="{% url 'search'%}">SEARCH</a>
         <p>
-        <i class="w3-xxxlarge w3-button material-icons">all_inbox</i>
-        <br>
-        <a class="w3-large">INVENTORY</a>
+            <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">all_inbox</i>
+            <br>
+            <a class="w3-large"  href="{% url 'edit'%}">INVENTORY</a>
         </p>
         </p>
     </div>
-
-    <!-- Contenido principal -->
-    <div class="w3-main">
+    <div class="w3-main ">
         <div class="w3-container w3-col s2"></div>
-        <div class="w3-container w3-col s10">
+        <div class="w3-container w3-col s9">
             {% block content %}
             {% endblock %}
         </div>
     </div>
     <script>
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
+        function barra(id) {
+            var x = document.getElementById(id);
+            if ((x.className.indexOf("w3-show") == -1)) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
         }
     </script>
 </body>
+
 </html>
