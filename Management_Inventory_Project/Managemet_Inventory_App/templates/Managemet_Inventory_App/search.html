@@ -1,6 +1,35 @@
 {% extends "Managemet_Inventory_App/base.html" %}
-{% block head%}
+{% block head %}
 {% endblock %}
-
 {% block content %}
+<div class="w3-container w3-cyan w3-border w3-border-black" id="SEARCH" style="margin-top: 30px; width: 1400px;">
+    <div class="w3-display-container w3-cyan w3-center" style="height: 800px;">
+        <form method="get">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12" style="margin-top: 12px">
+                    <input type="text" class="w3-input w3-border w3-border-black" placeholder="Nombre del producto..." id="name">
+                </div>
+            </div>
+        </form>
+        <button class="w3-cyan w3-border-0 w3-hover-cyan w3-hover-text-white" onclick="mostrar('filtros')">Busqueda avanzada</button>
+        <div id="filtros" class="w3-container w3-hide">
+            <form method="get">
+                <div class="input-group col-md-12" style="margin-top: 12px">
+                    <input type="text" class="w3-input w3-border w3-border-black" placeholder="Proveedor..." id="proveedor">
+                    <input type="text" class="w3-input w3-border w3-border-black" placeholder="sede..." id="sede">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function mostrar(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+</script>
 {% endblock %}
