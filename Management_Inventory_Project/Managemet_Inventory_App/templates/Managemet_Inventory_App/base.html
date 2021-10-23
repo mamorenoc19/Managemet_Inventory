@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {% block head %}
-    {% endblock %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Base</title>
 </head>
 <body>
-   <!-- Barra de navegación horizontal   -->
-   <div class="w3-bar w3-gray">
-       <h3 class="w3-left w3-padding">MANAGEMENT INVENTORY</h3>
-    <i class="w3-bar-item w3-button w3-right fa fa-user w3-xlarge"></i>
-    <i class="w3-bar-item w3-button w3-right fa fa-bell w3-xlarge"></i>
-    <i class="w3-bar-item w3-button w3-right fa fa-envelope w3-xlarge"></i>
-   </div>
-   <div>
-    <!-- Barra Lateral -->
-    <div class="w3-sidebar w3-bar w3-gray" style="width:20%">
-        <a class="w3-bar-item w3-button" href="#barras"></a>
-        <div class="w3-quarter">
-            <i class="w3-bar-item w3-button fa fa-home w3-xlarge"></i>
-            <br>
-             home
-            <i class="w3-bar-item w3-button fa fa-home w3-xlarge"></i>
-            <br>
-            home
-        </div>
+    <div class="w3-bar w3-gray w3-border-bottom w3-border-black w3-teal">
+        <button class="w3-button w3-teal w3-gray w3-left w3-xxlarge" onclick="w3_open()">☰</button>
+        <img class="w3-left" src="logo_mi.png" alt="logo" width="65" height="65">
+        <a class="w3-bar-item w3-cursive w3-xxlarge">MANAGMENT INVENTORY</a>
+        <i class="w3-xxxlarge w3-button w3-right material-icons">account_circle</i>
+        <i class="w3-xxxlarge w3-button w3-right material-icons">notifications</i>
+        <i class="w3-xxxlarge w3-button w3-right material-icons">mail</i>
     </div>
-
-    <div class="main w3-white   ">
-
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-border-black w3-gray w3-center" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-border-bottom w3-border-black w3-button w3-gray w3-large">&times;
+        </button>
+        <i class="w3-xxxlarge w3-button material-icons">home</i>
+        <br>
+        <a class="w3-large">HOME</a>
+        <p>
+        <i class="w3-xxxlarge w3-button material-icons">search</i>
+        <br>
+        <a class="w3-large">SEARCH</a>
+        <p>
+        <i class="w3-xxxlarge w3-button material-icons">all_inbox</i>
+        <br>
+        <a class="w3-large">INVENTORY</a>
+        </p>
+        </p>
     </div>
-   </div>
-    {% block content %}
-    {% endblock %}
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 </body>
 </html>
