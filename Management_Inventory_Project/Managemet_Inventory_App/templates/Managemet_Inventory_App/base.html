@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Base</title>
+    {% block head%}
+    {% endblock%}
 </head>
 <body>
+    <!-- barra de navegacion -->
     <div class="w3-bar w3-gray w3-border-bottom w3-border-black w3-teal">
         <button class="w3-button w3-teal w3-gray w3-left w3-xxlarge" onclick="w3_open()">☰</button>
         <img class="w3-left" src="logo_mi.png" alt="logo" width="65" height="65">
@@ -17,6 +20,7 @@
         <i class="w3-xxxlarge w3-button w3-right material-icons">notifications</i>
         <i class="w3-xxxlarge w3-button w3-right material-icons">mail</i>
     </div>
+    <!-- barra lateral -->
     <div class="w3-sidebar w3-bar-block w3-border-right w3-border-black w3-gray w3-center" style="display:none" id="mySidebar">
         <button onclick="w3_close()" class="w3-bar-item w3-border-bottom w3-border-black w3-button w3-gray w3-large">&times;
         </button>
@@ -33,6 +37,15 @@
         <a class="w3-large">INVENTORY</a>
         </p>
         </p>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="w3-main">
+        <div class="w3-container w3-col s2"></div>
+        <div class="w3-container w3-col s10">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
     <script>
         function w3_open() {
