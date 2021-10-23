@@ -1,103 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Management Inventory</title>
+    {% block head %}
+    {% endblock %}
 </head>
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-family: "Poppins", sans-serif
-    }
-
-    body {
-        font-size: 16px;
-    }
-
-    .w3-half img {
-        margin-bottom: -6px;
-        margin-top: 16px;
-        opacity: 0.8;
-        cursor: pointer
-    }
-
-    .w3-half img:hover {
-        opacity: 1
-    }
-</style>
-
-<body class="w3-purple">
-    <header>
-        <div class="w3-top w3-container w3-right">
-            <div class="w3-bar w3-grey w3-border  w3-right">
-
-                <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-envelope"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-right "><i class="fa fa-globe"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-white w3-right"><i class="fa fa-home"></i></a>
-            </div>
+<body>
+   <!-- Barra de navegación horizontal   -->
+   <div class="w3-bar w3-gray">
+       <h3 class="w3-left w3-padding">MANAGEMENT INVENTORY</h3>
+    <i class="w3-bar-item w3-button w3-right fa fa-user w3-xlarge"></i>
+    <i class="w3-bar-item w3-button w3-right fa fa-bell w3-xlarge"></i>
+    <i class="w3-bar-item w3-button w3-right fa fa-envelope w3-xlarge"></i>
+   </div>
+   <div>
+    <!-- Barra Lateral -->
+    <div class="w3-sidebar w3-bar w3-gray" style="width:20%">
+        <a class="w3-bar-item w3-button" href="#barras"></a>
+        <div class="w3-quarter">
+            <i class="w3-bar-item w3-button fa fa-home w3-xlarge"></i>
+            <br>
+             home
+            <i class="w3-bar-item w3-button fa fa-home w3-xlarge"></i>
+            <br>
+            home
         </div>
-        <nav class="w3-sidebar w3-gray w3-center ">
-            <div class="w3-container w3-bar">
-                <h3 class="w3-padding-64 w3-bar-item">
-                    <a href="#invetario" class="w3-bar-item w3-buttom">Perfil</a>
-                </h3>
+    </div>
 
-            </div>
-            <div class="w3-bar-block w3-white">
-                <a href="#invetario" class="w3-buttom w3-bar-item w3-hover-gray w3-center">
-                    inventario
-                </a>
-            </div>
-
-            <div class="w3-bar-block w3-white w3-hover-gray">
-                <a href="#invetario">
-                    Añadir
-                </a>
-            </div>
-
-            <div class="w3-bar-block w3-white w3-hover-gray">
-                <a href="#invetario">
-                    Seccion
-                </a>
-            </div>
-
-            <div class="w3-bar-block w3-white w3-hover-gray">
-                <a href="#invetario">
-                    Almacenamiento
-                </a>
-            </div>
-
-            <div class="w3-bar-block w3-white w3-hover-deep-purple">
-                <a href="#invetario">
-                    Contacto
-                </a>
-            </div>
-
-            <div class="w3-bar-block w3-white w3-deep-purple">
-                <a href="#holi">
-                    Boton
-                </a>
-
-            </div>
-        </nav>
-    </header>
-    <div class="w3-main w3-blue">
+    <div class="main w3-white   ">
 
     </div>
-    <footer>
-
-    </footer>
+   </div>
+    {% block content %}
+    {% endblock %}
 </body>
-
 </html>
