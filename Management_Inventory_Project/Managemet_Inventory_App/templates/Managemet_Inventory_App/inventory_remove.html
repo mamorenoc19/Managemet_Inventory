@@ -4,53 +4,99 @@
 {% block content %}
 <div class="w3-container w3-cyan w3-border w3-border-black w3-center" style="margin-top: 30px;">
     <div class="w3-display-container w3-cyan" style="height: 800px;">
-    <div class="w3-container w3-side-bar w3-bar ">
-        <a href="{% url 'edit'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit Product</a>
-        <a href="{% url 'remove'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove Product</a>
-        <a href="{% url 'productos'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add Product</a>
-    </div>
+        <div class="w3-container w3-side-bar w3-bar ">
+            <a href="/Managemet_Inventory_App/edit/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit
+                Product</a>
+            <a href="/Managemet_Inventory_App/remove/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-white w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove
+                Product</a>
+            <a href="/Managemet_Inventory_App/add/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add
+                Product</a>
+        </div>
         <div class="w3-container w3-small" style="margin-top: 10px;" id="remove">
             <ul class="w3-ul">
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto1<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto2<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto3<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto4<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto5<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto6<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto7<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto8<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto9<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto10<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto11<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto12<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto13<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto14<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto15<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto16<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto17<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto18<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span> </li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto19<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
-                <li class="w3-display-container w3-white w3-border w3-border-black">producto20<span onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span></li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto1<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto2<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto3<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto4<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto5<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto6<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto7<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto8<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto9<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto10<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto11<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto12<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto13<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto14<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto15<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto16<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto17<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto18<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto19<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
+                <li class="w3-display-container w3-white w3-border w3-border-black">producto20<span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right w3-hover-text-red w3-hover-white material-icons">delete</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -65,9 +111,9 @@
         var y = document.getElementById('y');
         var z = document.getElementById('z');
         if ((a.className.indexOf("w3-show") == -1)) {
-            if(id == 'edit'){
-                x.className = x.className.replace("w3-text-black","w3-text-white");
-                if((remove.className.indexOf("w3-show") != -1)){
+            if (id == 'edit') {
+                x.className = x.className.replace("w3-text-black", "w3-text-white");
+                if ((remove.className.indexOf("w3-show") != -1)) {
                     remove.className = remove.className.replace(" w3-show", "");
                     y.className = y.className.replace("w3-text-white", "w3-text-black");
                 }
@@ -114,7 +160,7 @@
             }
         }
     }
-    function next(){
+    function next() {
 
     }
 </script>
