@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class Marca(models.Model):
@@ -12,10 +13,10 @@ class Categorias(models.Model):
 class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
 
-class Producto(models.Model):
+class producto(models.Model):
     nombre = models.CharField(max_length=30)
-    #idCategoria= models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    #idMarca= models.ForeignKey(Marca, on_delete=models.CASCADE)
-    etiqueta = models.CharField(max_length=30, blank = True)
+    categoria= models.CharField(max_length=30)
+    marca= models.CharField(max_length=30)
+    sede = models.CharField(max_length=30)
     cantidad = models.IntegerField()
-
+    proveedor = models.CharField(max_length=30)
