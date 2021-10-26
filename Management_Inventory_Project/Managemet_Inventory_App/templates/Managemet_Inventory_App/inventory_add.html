@@ -1,26 +1,23 @@
 {% extends "Managemet_Inventory_App/base.html" %}
-{% load static%}
-{% block head%}
+{% block head %}
 {% endblock %}
-
 {% block content %}
-<div class="w3-container w3-cyan w3-border w3-border-black w3-center" id="sobre_nosotros" style="margin:30px">
-    <div class="w3-container w3-side-bar w3-bar ">
-        <a href="{% url 'edit'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit Product</a>
-        <a href="{% url 'remove'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove Product</a>
-        <a href="{% url 'productos'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add Product</a>
+<div class="w3-cyan w3-border w3-border-black w3-center" id="sobre_nosotros" style="margin:30px">
+    <div class="w3-side-bar w3-bar ">
+        <a href="/Managemet_Inventory_App/edit/"
+            class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit
+            Product</a>
+        <a href="/Managemet_Inventory_App/remove/"
+            class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove
+            Product</a>
+        <a href="/Managemet_Inventory_App/add/"
+            class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-white w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add
+            Product</a>
     </div>
-
-    <div class="w3-container w3-white w3-margin">
-        <form action="agregar_producto/" class="w3-light-grey w3-text-blue w3-margin">
-            <input class="w3-input w3-border w3-margin" type="text" placeholder="Nombre">
-            <input class="w3-input w3-border w3-margin" type="text" placeholder="Categoría">
-            <input class="w3-input w3-border w3-margin" type="text" placeholder="Cantidad">
-            <input class="w3-input w3-border w3-margin" type="text" placeholder="Marca">
-            <input class="w3-input w3-border w3-margin" type="text" placeholder="Proveedor">
-            <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding w3-margin">Agregar producto</button>
-        </form>
-    </div>
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button style="margin-bottom: 10px;" type="submit">Guardar</button>
+    </form>
 </div>
-
 {% endblock %}
