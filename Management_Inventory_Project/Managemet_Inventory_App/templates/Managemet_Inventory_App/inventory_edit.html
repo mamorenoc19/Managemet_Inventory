@@ -5,289 +5,295 @@
 {% block content %}
 <div class="w3-container w3-cyan w3-border w3-border-black w3-center" id="sobre_nosotros" style="margin:30px">
     <div class="w3-display-container w3-cyan" style="height: 800px;">
-    <div class="w3-container w3-side-bar w3-bar ">
-        <a href="{% url 'edit'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit Product</a>
-        <a href="{% url 'remove'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove Product</a>
-        <a href="{% url 'productos'%}" class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add Product</a>
+        <div class="w3-container w3-side-bar w3-bar ">
+            <a href="/Managemet_Inventory_App/edit/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-white w3-hover-gray w3-hover-text-white w3-border w3-border-black">Edit
+                Product</a>
+            <a href="/Managemet_Inventory_App/remove/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Remove
+                Product</a>
+            <a href="/Managemet_Inventory_App/add/"
+                class="w3-margin-top w3-bar-item w3-button w3-bar-item w3-gray w3-cursive w3-text-black w3-hover-gray w3-hover-text-white w3-border w3-border-black">Add
+                Product</a>
+        </div>
+        <div class="w3-container w3-small" id="edit">
+            <table class="w3-table-all w3-small" style="margin-top: 10px;">
+                <thead>
+                    <tr class="w3-light-grey w3-border w3-border-black">
+                        <th class="w3-border w3-border-black">Nombre</th>
+                        <th class="w3-border w3-border-black">Categoria</th>
+                        <th class="w3-border w3-border-black">Marca</th>
+                        <th class="w3-border w3-border-black">Proveedor</th>
+                        <th class="w3-border w3-border-black">Sede</th>
+                        <th class="w3-border w3-border-black">Cantidad</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                    <td class="w3-border w3-border-black">
+                        <input class="w3-input w3-border-0" type="text">
+                    </td>
+                </tr>
+            </table>
+            <div class="w3-bar w3-round">
+                <a class="w3-button w3-hover-cyan w3-hover-text-white">&#10094; Previous</a>
+                <a onclick="" class="w3-button w3-hover-cyan w3-hover-text-white w3-right">Next &#10095;</a>
+            </div>
+        </div>
     </div>
-<div class="w3-container w3-small" id="edit">
-    <table class="w3-table-all w3-small" style="margin-top: 10px;">
-        <thead>
-            <tr class="w3-light-grey w3-border w3-border-black">
-                <th class="w3-border w3-border-black">Nombre</th>
-                <th class="w3-border w3-border-black">Categoria</th>
-                <th class="w3-border w3-border-black">Marca</th>
-                <th class="w3-border w3-border-black">Proveedor</th>
-                <th class="w3-border w3-border-black">Sede</th>
-                <th class="w3-border w3-border-black">Cantidad</th>
-            </tr>
-        </thead>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-        <tr>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-            <td class="w3-border w3-border-black">
-                <input class="w3-input w3-border-0" type="text">
-            </td>
-        </tr>
-    </table>
-    <div class="w3-bar w3-round">
-        <a class="w3-button w3-hover-cyan w3-hover-text-white">&#10094; Previous</a>
-        <a onclick="" class="w3-button w3-hover-cyan w3-hover-text-white w3-right">Next &#10095;</a>
-    </div>
-</div>
-</div>
 
 {% endblock %}
