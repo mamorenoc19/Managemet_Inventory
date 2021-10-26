@@ -6,6 +6,9 @@ from Managemet_Inventory_App.forms import productoForm
 def home(request):
     return render(request, "Managemet_Inventory_App/home.html")
 
+def search(request):
+    return render(request, "Managemet_Inventory_App/search.html")
+
 def producto_view(request):
     if request.method == 'POST':
         form = productoForm(request.POST)
