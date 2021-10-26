@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,29 +10,26 @@
     {% block head %}
     {% endblock %}
 </head>
-
 <body>
-    <div class="w3-bar w3-gray w3-border-bottom w3-border-black w3-teal">
+    <div class="w3-responsive w3-bar w3-gray w3-border-bottom w3-border-black">
         <button onclick="barra('barra')" class="w3-button w3-teal w3-gray w3-left w3-xxlarge">☰</button>
-        <img class="w3-left" src="logo_mi.png" alt="logo" width="65" height="65">
         <a class="w3-bar-item w3-cursive w3-xxlarge">MANAGMENT INVENTORY</a>
         <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">account_circle</i>
         <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">notifications</i>
         <i class="w3-hover-text-white w3-hover-gray w3-xxxlarge w3-button w3-right material-icons">mail</i>
     </div>
-    <div class="w3-sidebar w3-bar-block w3-border-right w3-border-black w3-gray w3-center" style="display:none"
-        id="barra">
-        <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">home</i>
+    <div class="w3-responsive w3-sidebar w3-border-right w3-border-black w3-gray w3-center" style="display:none" id="barra">
+        <a href="/Managemet_Inventory_App/home/" class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">home</a>
         <br>
-        <a class="w3-large"  href="{% url 'home'%}">HOME</a>
+        <a class="w3-large">HOME</a>
         <p>
-            <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">search</i>
-            <br>
-            <a class="w3-large"  href="{% url 'search'%}">SEARCH</a>
+        <a href="/Managemet_Inventory_App/search/" class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">search</a>
+        <br>
+        <a class="w3-large">SEARCH</a>
         <p>
-            <i class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">all_inbox</i>
-            <br>
-            <a class="w3-large"  href="{% url 'edit'%}">INVENTORY</a>
+        <a href="/Managemet_Inventory_App/inventory/" class="w3-xxxlarge w3-button material-icons w3-hover-gray w3-hover-text-white">all_inbox</a>
+        <br>
+        <a class="w3-large">INVENTORY</a>
         </p>
         </p>
     </div>
@@ -46,14 +42,13 @@
     </div>
     <script>
         function barra(id) {
-            var x = document.getElementById(id);
-            if ((x.className.indexOf("w3-show") == -1)) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+                var x = document.getElementById(id);
+                if ((x.className.indexOf("w3-show") == -1)) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
             }
-        }
     </script>
 </body>
-
 </html>
