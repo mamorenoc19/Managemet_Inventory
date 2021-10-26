@@ -20,5 +20,5 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("Managemet_Inventory_App.urls")),
+    path('Managemet_Inventory_App/', include("Managemet_Inventory_App.urls", namespace = 'Managemet_Inventory_App')),
 ]
